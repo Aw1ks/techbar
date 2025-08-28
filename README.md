@@ -6,8 +6,6 @@
 1. Clone the repository:
 ```
 git clone https://github.com/Aw1ks/techbar.git
-```
-```
 cd techbar
 ```
 2. Establish dependencies:
