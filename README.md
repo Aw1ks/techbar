@@ -5,7 +5,10 @@
 ## How to install
 1. Clone the repository:
 ```
-git clone https://github.com/Aw1ks/techbar.git cd techbar
+git clone https://github.com/Aw1ks/techbar.git
+```
+```
+cd techbar
 ```
 2. Establish dependencies:
 - Arch Linux:
