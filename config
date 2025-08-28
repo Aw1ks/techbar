@@ -1,0 +1,312 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "margin-bottom":0,
+  "margin-top":0,
+
+  "modules-left": [
+    "hyprland/workspaces",
+    "custom/arrow-right-decor1",
+
+    "hyprland/window",
+    "custom/arrow-right-decor2"
+  ],
+
+  "modules-center": [
+    "tray",
+
+    "custom/limiter-center-decor3",
+    "group/clock_lang",
+
+    "custom/limiter-center-decor1",
+    "custom/arch",
+    "custom/limiter-center-decor2",
+    
+    "group/cpu_memory",
+    "custom/limiter-center-decor4",
+    
+    "temperature"
+  ],
+  
+  "modules-right":  [
+    "custom/arrow-left-decor3",
+    "network",
+    
+    "custom/arrow-left-decor2",
+    "pulseaudio",
+    
+    "custom/arrow-left-decor1",
+    "battery"
+  ],
+  
+  // ------ GROUPS ------
+  "group/cpu_memory": {
+    "orientation": "horizontal",
+    "modules": [
+      "cpu",
+      "memory"
+    ]
+  },
+
+  "group/clock_lang": {
+    "orientation": "horizontal",
+    "modules": [
+      "hyprland/language",
+      "clock"
+    ]
+  },
+  
+  // ------ MODULES ------
+
+  // left
+  "hyprland/workspaces": {
+    "on-scroll-up": "hyprctl dispatch workspace -1",
+    "on-scroll-down": "hyprctl dispatch workspace +1",
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+  },
+  
+  "hyprland/window": {
+    "format": "{class}",
+    "min-length": 5,
+
+    // === Window Titles ===
+
+    "rewrite": {
+      
+      // == Desktop ==
+
+      "": "<span foreground='#89b4fa'> </span> Hyprland",
+
+      // == Terminal ==
+
+      "~": "  Terminal",
+      "zsh": "  Terminal",
+      "kitty": "  Terminal",
+      "sejjy@archlinux:(.*)": "  Terminal",
+      "(.*)sejjy@archlinux:~": "  Terminal",
+
+      // == Browser ==
+
+      "(.*) — Mozilla Firefox": "<span foreground='#f38ba8'>󰈹 </span> Firefox",
+      "(.*)Mozilla Firefox": "<span foreground='#f38ba8'>󰈹 </span> Firefox",
+      "firefox": "<span foreground='#f38ba8'>󰈹 </span> Firefox",
+
+      // == Development ==
+
+      "Code - OSS": "<span foreground='#89b4fa'>󰨞 </span> Code - OSS",
+      "(.*) - Code - OSS": "<span foreground='#89b4fa'>󰨞 </span> $1",
+      "(.*)Code - OSS": "<span foreground='#89b4fa'>󰨞 </span> Code - OSS",
+      "code-oss": "<span foreground='#89b4fa'>󰨞 </span> Code - OSS",
+
+      "(.*) - Visual Studio Code": "<span foreground='#89b4fa'>󰨞 </span> $1",
+      "(.*)Visual Studio Code": "<span foreground='#89b4fa'>󰨞 </span> Visual Studio Code",
+
+      "Godot": "<span foreground='#89b4fa'> </span> Godot Engine",
+      "Godot Engine - (.*)": "<span foreground='#89b4fa'> </span> $1",
+      "(.*) - Godot Engine": "<span foreground='#89b4fa'> </span> $1",
+
+      // == Media ==
+
+      "(.*)Spotify": "<span foreground='#a6e3a1'> </span> Spotify",
+      "(.*)Spotify Premium": "<span foreground='#a6e3a1'> </span> Spotify Premium",
+
+      "OBS(.*)": "<span foreground='#a6adc8'>󰐌 </span> OBS Studio",
+
+      "VLC media player": "<span foreground='#fab387'>󰕼 </span> VLC Media Player",
+      "(.*) - VLC media player": "<span foreground='#fab387'>󰕼 </span> $1",
+
+      "GNU Image Manipulation Program": "<span foreground='#a6adc8'> </span> GNU Image Manipulation Program",
+
+      "qView": "  qView",
+
+      "(.*).jpg": "  $1.jpg",
+      "(.*).png": "  $1.png",
+      "(.*).svg": "  $1.svg",
+
+      // == Social ==
+
+      "vesktop": "<span foreground='#89b4fa'> </span> Discord",
+
+      "• Discord(.*)": "Discord$1",
+      "(.*)Discord(.*)": "<span foreground='#89b4fa'> </span> $1Discord$2",
+
+      "Telegram Desktop": "<span foreground='#0088cc'> </span> Telegram",
+      "Telegram - (.*)": "<span foreground='#0088cc'> </span> $1Telegram",
+      "(.*)Telegram": "<span foreground='#0088cc'> </span> $1Telegram",
+      "(.*) - Telegram": "<span foreground='#0088cc'> </span> $1Telegram",
+      "org.telegram.desktop": "<span foreground='#89b4fa'> </span> Telegram",
+      "(.*)org.telegram.desktop": "<span foreground='#89b4fa'> </span> Telegram",
+
+      // == Documents ==
+
+      "ONLYOFFICE Desktop Editors": "<span foreground='#f38ba8'> </span> OnlyOffice Desktop",
+
+      "(.*).docx": "<span foreground='#89b4fa'> </span> $1.docx",
+      "(.*).xlsx": "<span foreground='#a6e3a1'> </span> $1.xlsx",
+      "(.*).pptx": "<span foreground='#fab387'> </span> $1.pptx",
+      "(.*).pdf": "<span foreground='#f38ba8'> </span> $1.pdf",
+
+      "/": "  File Manager",
+      "thunar": "  thunar",
+      
+      // == System ==
+      
+      "Timeshift-gtk": "<span foreground='#a6e3a1'> </span> Timeshift",
+      
+      "Authenticate": "  Authenticate"
+    }
+  },
+  
+  // center
+  "tray": {
+    "icon-size": 16,
+    "spacing": 6
+  },
+  
+  "hyprland/language": {
+    "format": " {}",
+    "format-en": "EN",
+    "format-ru": "RU"
+  },
+
+  "clock": {
+    "locale": "C", 
+    "format": " {:%I:%M-%p}",
+    "format-alt": " {:%a,%b %d}"
+  },
+
+  "custom/arch": {
+    "format": "󰣇",
+    "tooltip": true,
+    "tooltip-format": "btw"
+  },
+
+  "cpu": {
+    "interval": 10,
+    "format": "󰍛 {usage}%",
+    "format-alt": "{icon0}{icon1}{icon2}{icon3}",
+
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+  },
+
+  "memory": {
+    "interval": 30,
+    "format": " {used:0.2f}GB",
+    "max-length": 10,
+    "tooltip": false,
+    "warning": 70,
+    "critical": 90
+  },
+
+  "temperature": {
+    "interval": 10,
+    "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input",
+    "critical-threshold": 100,
+    "format-critical": " {temperatureC}",
+    "format": " {temperatureC}°C"
+  },
+
+  // right
+  "network": {
+    "interval": 2,
+    "format-wifi": " {signalStrength}%",
+    "format-ethernet": "",
+    "format-linked": " {ipaddr}",
+    "format-disconnected": " Disconnected",
+    "format-disabled": "",
+    "tooltip": false,
+    "max-length": 20,
+    "min-length": 6,
+    "format-alt": "{essid}"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}% {format_source}",
+    "format-bluetooth": "{icon} {volume}% {format_source}",
+    "format-bluetooth-muted": " {format_source}",
+    "format-muted": "  {format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "🎧",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  "battery": {
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-full": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+
+  // ------ DECORATION ------
+
+  // left
+  "custom/arrow-left-decor1": {
+    "format": "",
+    "tooltip": false
+  },
+
+  "custom/arrow-left-decor2": {
+    "format": "",
+    "tooltip": false
+  },
+
+  "custom/arrow-left-decor3": {
+    "format": "",
+    "tooltip": false
+  },
+
+  // center
+  "custom/limiter-center-decor1": {
+    "format": "┗",
+    "tooltip": false
+  },
+
+  "custom/limiter-center-decor3": {
+    "format": "┗",
+    "tooltip": false
+  },
+
+  "custom/limiter-center-decor2": {
+    "format": "┛",
+    "tooltip": false
+  },
+
+  "custom/limiter-center-decor4": {
+    "format": "┛",
+    "tooltip": false
+  },
+
+  // right
+  "custom/arrow-right-decor1": {
+    "format": "",
+    "tooltip": false
+  },
+
+  "custom/arrow-right-decor2": {
+    "format": "",
+    "tooltip": false
+  }
+}
+
