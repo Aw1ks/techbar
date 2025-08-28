@@ -1,5 +1,5 @@
 # Techbar
-A techno-themed [Waybar](https://github.com/Alexays/Waybar) designed for Hyprland.
+### A techno-themed [Waybar](https://github.com/Alexays/Waybar) designed for Hyprland.
 
 ## How to install
 1. Clone the repository:
