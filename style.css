@@ -99,7 +99,7 @@ window#waybar {
 /* ------ TRAY ------ */
 #tray {
     padding: 0 10px 0 15px;
-    background: #948979;
+    background: #4c535e;
     border-radius: 0 0 0 20px;
 }
 
@@ -123,7 +123,7 @@ window#waybar {
 #custom-limiter-center-decor3,
 #custom-limiter-center-decor4 {
     color: #393E46;
-    background: #948979;
+    background: #4c535e;
 }
 
 #custom-arch {
@@ -150,7 +150,7 @@ window#waybar {
 /* ------ TEMPERATURE ------ */
 #temperature {
     padding: 0 15px 0 10px;
-    background: #948979;
+    background: #4c535e;
     border-radius: 0 0 20px 0;
 }
 
@@ -164,6 +164,10 @@ window#waybar {
 #custom-arrow-left-decor2,
 #custom-arrow-left-decor3 {
     text-shadow: -2px 0 2px rgba(0, 0, 0, 0.5);
+}
+
+#custom-arrow-left-decor3 {
+    padding-left: 5px;
 }
 
 /* ------ BATTERY ------ */
@@ -187,16 +191,17 @@ window#waybar {
 
 #custom-arrow-left-decor2 {
     color: #393E46;
-    background: #948979;
+    background: #4c535e;
     padding-left: 10px;
 }
 
 /* ------ NETWORK ------ */
 #network {
-    background: #948979;
+    background: #4c535e;
 }
 
 #custom-arrow-left-decor3 {
-    color: #948979;
+    color: #4c535e;
     margin-right: 1px;
 }
+
