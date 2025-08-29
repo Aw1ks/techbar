@@ -17,17 +17,17 @@ sudo pacman -S waybar gtk4 json-c cairo pango libxembed networkmanager pulseaudi
 ```
 sudo apt update
 sudo apt install waybar gtk-4.0 libjson-c5 libjson-c-dev libcairo2-dev libpango1.0-dev libxembed-dev network-manager pulseaudio upower hyprland
-sudo apt install pavucontrol # Для on-click действия pulseaudio control
+sudo apt install pavucontrol 
 ```
 - Fedora:
 ```
 sudo dnf install waybar gtk4 json-c cairo pango libXembed-devel NetworkManager pulseaudio upower hyprland
-sudo dnf install pavucontrol # Для on-click действия pulseaudio control
+sudo dnf install pavucontrol 
 ```
 - openSUSE:
 ```
 sudo zypper install waybar gtk4 json-c cairo pango libXembed-devel NetworkManager pulseaudio upower hyprland
-sudo zypper install pavucontrol # Для on-click действия pulseaudio control
+sudo zypper install pavucontrol 
 ```
 3. Copy configuration files:
 ```
